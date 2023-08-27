@@ -25,11 +25,14 @@ body {
 
 #direction2 { 
   font-size: 40px;
-  height: 46px;
-  margin: 0px;
+  height: 123.5px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding-top: 20px;
 }
 
 #timer { 
   font-size: 125px;
-  margin: 0px;
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
