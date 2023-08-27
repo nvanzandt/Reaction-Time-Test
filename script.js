@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     clearInterval(interval);
     millisec = 0;
     updateTimer(millisec);
-    timer.style.visibility = 'hidden';
+    timer.style.display = 'none';
   }
 
   const startSignalDelay = function() {
@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
     timeout = setTimeout( () => {
       body.style.backgroundColor = 'rgb(78, 255, 78)';
       direction1.innerHTML = 'Click!';
+      direction2.style.display = 'none';
+      timer.style.display = 'block';
       startTimer();
       signaled = true;
     }, startTime * 1000);
@@ -58,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 
-  timer.style.visibility = 'hidden';
+  timer.style.display = 'none';
 
   this.onclick = () => { 
     if (!started) {
@@ -68,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
       body.style.backgroundColor = 'rgb(255, 78, 78)';
       direction1.innerHTML = 'Waiting...';
       direction2.innerHTML = '';
+      direction2.style.display = 'block';
     }
     else if(!signaled) { 
       resetSignalDelay();
@@ -89,6 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
      
       body.style.backgroundColor = 'rgb(78, 78, 255)'; 
       direction1.innerHTML = 'Click to keep going.';
+      direction2.style.display = 'none';
+      timer.style.display = 'block';
     }
   }
 
